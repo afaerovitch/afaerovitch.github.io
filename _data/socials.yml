@@ -2,6 +2,6 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 email: faerovitcha@gmail.com # your email address
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
+cv_pdf: /assets/pdf/FaerovitchA_Resume.pdf # path to your CV PDF file
 linkedin_username: arthem-faerovitch
 github_username: afaerovitch
