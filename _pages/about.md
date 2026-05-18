@@ -24,4 +24,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hey there! I'm a Computer Science student at Duquesne, finishing my degree in December. My technical world revolves around software engineering and machine learning, driven by a deep love for statistical reasoning. A highlight of my college career was building DuqSchut, a custom tutor scheduling platform we created in my software engineering course (our department actually uses this app today!). Outside of tech, I love playing Sudoku and spending my free days golfing.
+Hey there!
+
+I'm a Computer Science student at Duquesne, finishing my degree in December. My technical world revolves around `software engineering` and `machine learning`, driven by a deep love for `statistical reasoning`. A highlight of my college career was building `DuqSchut`, a custom `tutor scheduling platform` we created in my software engineering course (`our department actually uses this app today!`). Outside of tech, I love playing `Sudoku` and spending my free days `golfing`.
