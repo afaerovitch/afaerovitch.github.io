@@ -5,9 +5,9 @@ cv:
   location: Pittsburgh, PA
   image: ""
   summary: >
-  Computer Science senior at Duquesne University graduating in December 2026, with hands-on experience in software engineering and machine learning.
-  Combining strong statistical reasoning with practical development skills, demonstrated by co-building DuqSchut, a community tutor scheduling service.
-  Eager to leverage problem-solving abilities and a passion for data-driven applications in a full-time Software Engineer role.
+    Computer Science senior at Duquesne University graduating in December 2026, with hands-on experience in software engineering and machine learning.
+    Combining strong statistical reasoning with practical development skills, demonstrated by co-building DuqSchut, a community tutor scheduling service.
+    Eager to leverage problem-solving abilities and a passion for data-driven applications in a full-time Software Engineer role.
 
   social_networks:
     - network: GitHub
@@ -60,8 +60,8 @@ cv:
     Projects:
       - name: Sudoku Solver
         summary: >
-        Engineered a modular Java-based CSP solver utilizing AC-3 inference and advanced search heuristics (MRV, LCV) to solve complex Sudoku variants;
-        built an automated JUnit pipeline to benchmark algorithmic efficiency and ensure code robustness.
+          Engineered a modular Java-based CSP solver utilizing AC-3 inference and advanced search heuristics (MRV, LCV) to solve complex Sudoku variants;
+          built an automated JUnit pipeline to benchmark algorithmic efficiency and ensure code robustness.
         highlights:
           - Artificial Intelligence & Algorithm Design
           - Performance Engineering & Benchmarking
