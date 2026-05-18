@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://afaerovitch.github.io/sitemap.xml
+Sitemap: https://www.faerovitcha.dev/sitemap.xml
