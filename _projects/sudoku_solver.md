@@ -12,13 +12,6 @@ featured: true
 
 `Variant Sudoku` describes a class of puzzles that riff on the traditional Japanese puzzle game. These puzzles add new constraints on top of the standard 1-9 in every row, column, and box (for example, the Anti-Knight constraint prevents the same digit from appearing one chess knight's move away from itself). For the final project in my AI course, I developed an algorithm that could efficiently solve many of these different rulesets.
 
-    ---
-    layout: page
-    title: Sudoku Solver
-    description: Experimenting with different AI algorithms to solve variant Sudoku puzzles
-    img: /assets/img/sudoku_solver/gw_board.png
-    ---
-
 ### Technology Stack
 
 - **Language:** Java
