@@ -4,12 +4,12 @@ title: Building My Personal Website
 date: 2026-05-20
 description: Check out how I created this website!
 tags:
-	- personal
-	- website
-	- portfolio
-	- jekyll
+  - personal
+  - website
+  - portfolio
+  - jekyll
 categories:
-	- Projects
+  - Projects
 ---
 
 A couple of days ago, I decided to try my hand at building my own personal website. Years ago, I remember seeing developers on YouTube talk about how they built their own websites for their "portfolio". I always thought that looked like fun, but I never made one because I didn't think it was a worthwhile investment.
