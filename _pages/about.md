@@ -31,3 +31,5 @@ I'm a `Computer Science` student at Duquesne, finishing my degree in December. M
 A highlight of my college career was building DuqSchut, a custom `tutor scheduling platform` our class created in our software engineering course (our department actually uses this app today!). 
 
 Outside of tech, I love playing Sudoku and spending my free days golfing.
+
+<a href="/projects">Wondering where to go next? Check out some of the projects I've worked on!</a>
