@@ -43,6 +43,7 @@ cv:
         location: Pittsburgh, PA
         start_date: Sep 2025
         end_date: May 2026
+        summary: Supported Duquesne University computer science students through one-on-one and small-group tutoring in programming, debugging, and core CS concepts, helping reinforce problem-solving skills and build confidence with coursework.
 
     Leadership Experience:
       - organization: Duquesne University
@@ -50,10 +51,7 @@ cv:
         location: Pittsburgh, PA
         start_date: Jan 2025
         end_date: Present
-        summary: Co-founded and serve as Vice President of the Computer Science Club at Duquesne University, leading organizational strategy, event planning, and member engagement initiatives.
-        highlights:
-          - Organized and led club meetings and presentations to coordinate events, ensuring effective communication and execution.
-          - Coordinated club participation in Perforated AI and SteelHacks, managing event logistics and team involvement while actively competing in hackathon-style software development challenges.
+        summary: Co-founded and serve as Vice President of the Computer Science Club at Duquesne University, shaping organizational strategy, event planning, and member engagement activities.
 
     Projects:
       - name: Sudoku Solver
