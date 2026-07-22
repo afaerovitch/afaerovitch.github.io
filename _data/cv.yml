@@ -44,19 +44,6 @@ cv:
         start_date: Sep 2025
         end_date: May 2026
 
-    # Skills:
-      # - name: Physics
-        # level: Master
-        # icon: fa-solid fa-hashtag
-        # keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: English
-        summary: "Native speaker"
-
-      - name: Russian
-        summary: "Fluent"
-  
     Projects:
       - name: Sudoku Solver
         summary: >
@@ -68,6 +55,71 @@ cv:
           - Test-Driven Development
         start_date: 2026-04-01
         end_date: 2026-05-01
+
+      - name: Pokemon Card Classifier
+        summary: >
+          Engineered a computer vision pipeline using YOLOv8 and Python to classify Pokemon card images, achieving high-accuracy inference on eBay listing images.
+          Designed and implemented a web scraping pipeline to collect, preprocess, and label a custom training dataset for scalable data acquisition and improved model generalization.
+        highlights:
+          - Computer Vision and Object Detection
+          - Data Collection and Preprocessing
+          - Model Training and Evaluation
+        end_date: 2025-05-01
+
+      - name: DuqSchut Tutor Scheduling
+        summary: >
+          Collaborated in a 25-member Agile development team to build a full-stack tutor scheduling platform using .NET, Blazor, and Azure, delivering scalable CRUD functionality across front-end and back-end systems.
+          Developed and maintained features using C#, Razor/HTML, and MVC architecture, applying SOLID design principles to ensure modularity, maintainability, and clean code practices.
+        highlights:
+          - Full-Stack Development
+          - Agile Team Collaboration
+          - MVC Architecture and SOLID Design
+        end_date: 2025-05-01
+
+    Skills:
+      - name: Programming Languages
+        keywords:
+          - Java
+          - C#
+          - Python
+          - C
+          - C++
+          - JavaScript
+          - TypeScript
+
+      - name: Tools
+        keywords:
+          - .NET
+          - Blazor
+          - PyTorch
+          - Keras
+          - Node.js
+          - Azure
+          - Git
+          - Linux
+
+      - name: Software Engineering
+        keywords:
+          - Agile
+          - Scrum
+          - MVC Architecture
+          - SOLID Principles
+          - CRUD Development
+          - Design Patterns
+
+      - name: Machine Learning
+        keywords:
+          - Object Detection
+          - Classification
+          - Data Processing
+          - Model Training & Evaluation
+
+    Languages:
+      - name: English
+        summary: "Native speaker"
+
+      - name: Russian
+        summary: "Fluent"
 
     # References:
       # - name: Professor John Doe
