@@ -46,7 +46,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-sudoku-solver",
+          section: "News",},{id: "projects-pokemon-card-classifier",
+          title: 'Pokemon Card Classifier',
+          description: "Building a computer vision pipeline to detect and classify Pokemon cards from marketplace images",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pokemon_card_classifier/";
+            },},{id: "projects-sudoku-solver",
           title: 'Sudoku Solver',
           description: "Experimenting with different AI algorithms to solve variant Sudoku puzzles",
           section: "Projects",handler: () => {
