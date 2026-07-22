@@ -120,7 +120,18 @@ layout: default
           </div>
         {% endif %}
 
-        <!-- RenderCV Sections - Merge Experience and Volunteer -->
+        <!-- RenderCV Sections - Education, then Experience, then the rest -->
+        {% if cv.sections.Education %}
+          <a class="anchor" id="education"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Education</h3>
+            <div>
+              {% assign entries = cv.sections.Education %}
+              {% include cv/education.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
         {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
         {% assign empty_array = '' | split: ',' %}
         {% assign exp = cv.sections.Experience | default: empty_array %}
@@ -137,13 +148,13 @@ layout: default
           </div>
         {% endif %}
 
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        {% comment %} Now render all other sections except Education, Experience and Volunteer {% endcomment %}
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
 
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
+          {% comment %} Skip sections already processed above {% endcomment %}
+          {% if section_title == 'Education' or section_title == 'Experience' or section_title == 'Volunteer' %}
             {% continue %}
           {% endif %}
 
@@ -172,6 +183,9 @@ layout: default
               {% elsif section_title == 'Certificates' %}
                 {% assign entries = section_entries %}
                 {% include cv/certificates.liquid %}
+              {% elsif section_title == 'Leadership Experience' %}
+                {% assign entries = section_entries %}
+                {% include cv/experience.liquid %}
               {% elsif section_title == 'Projects' or section_title == 'Open Source Projects' %}
                 {% assign entries = section_entries %}
                 {% include cv/projects.liquid %}
