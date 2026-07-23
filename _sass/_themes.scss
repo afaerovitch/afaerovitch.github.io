@@ -7,8 +7,8 @@
 :root {
   color-scheme: light;
   --global-bg-color: #{v.$white-color};
-  --global-code-bg-color: rgba(#{color.channel(v.$green-color, "red", $space: rgb)}, #{color.channel(v.$green-color, "green", $space: rgb)}, #{color.channel(v.$green-color, "blue", $space: rgb)}, 0.12);
-  --global-code-text-color: #{v.$green-color-dark};
+  --global-code-bg-color: rgba(#{color.channel(v.$green-color, "red", $space: rgb)}, #{color.channel(v.$green-color, "green", $space: rgb)}, #{color.channel(v.$green-color, "blue", $space: rgb)}, 0.06);
+  --global-code-text-color: #{color.adjust(v.$green-color, $lightness: -35%)};
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$green-color};
   --global-theme-color: #{v.$green-color};
