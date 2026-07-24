@@ -46,7 +46,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-pokemon-card-classifier",
+          section: "News",},{id: "projects-duqschut-tutor-scheduling",
+          title: 'DuqSchut Tutor Scheduling',
+          description: "Co-building a full-stack tutor scheduling platform with .NET, Blazor, and Azure",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/duqschut_tutor_scheduling/";
+            },},{id: "projects-pokemon-card-classifier",
           title: 'Pokemon Card Classifier',
           description: "Building a computer vision pipeline to detect and classify Pokemon cards from marketplace images",
           section: "Projects",handler: () => {
