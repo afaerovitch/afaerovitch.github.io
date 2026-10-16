@@ -1,7 +1,7 @@
 cv:
   name: Arthem Faerovitch
   label: Computer Science Student
-  email: faerovitcha@gmail.com
+  email: arthem@faerovitcha.dev
   location: Pittsburgh, PA
   image: ""
   summary: >
@@ -31,6 +31,16 @@ cv:
           # - Description 2.
 
     Experience:
+      - company: Maven Machines
+        position: Customer Support Representative
+        location: Pittsburgh, PA
+        start_date: September 2026
+        end_date: Present
+        highlights:
+          - Provide customer-facing technical support for Maven’s trucking operations platform, translating operational challenges into clear, actionable solutions.
+          - Investigate support tickets, reproduce reported issues, document findings, and perform bug triage to improve prioritization and accelerate resolution.
+          - Partner cross-functionally with software engineers to communicate customer context, coordinate solutions, and deliver a reliable product experience.
+
       - company: Owl's Nest Restaurant
         position: Website Developer
         location: Pittsburgh, PA
