@@ -1,6 +1,6 @@
 cv:
   name: Arthem Faerovitch
-  label: Computer Science Student
+  label: Customer Support Representative & Deployment Manager
   email: arthem@faerovitcha.dev
   location: Pittsburgh, PA
   image: ""
@@ -17,33 +17,31 @@ cv:
 
   sections:
     Education:
-      - institution: Duquesnse University
+      - institution: Duquesne University
         location: Pittsburgh, PA
         url: https://duq.edu/
-        area: Computer Science
+        area: Computer Science, Minor in Mathematics
         studyType: B.S.
         start_date: 2023
         end_date: 2026
         score: "3.6"
-        # courses: "Theory of Relativity"
-        # highlights:
-          # - Description 1.
-          # - Description 2.
+        highlights:
+          - "GPA: 3.6; Dean’s List"
 
     Experience:
       - company: Maven Machines
-        position: Customer Support Representative
+        position: Customer Support Representative, Deployment Manager (additional assignment, started Oct 2026)
         location: Pittsburgh, PA
         start_date: Sep 2026
         end_date: Present
-        summary: Provide customer-facing technical support for Maven’s trucking operations platform by investigating and reproducing reported issues, documenting findings, performing bug triage, and partnering with software engineers to deliver clear solutions and a reliable product experience.
+        summary: Provide technical support and coordinate a client software rollout, investigating issues, testing solutions, and collaborating with clients and engineers to improve the product experience.
 
       - company: Owl's Nest Restaurant
-        position: Website Developer
-        location: Pittsburgh, PA
+        position: Website Development and Maintenance
+        location: Upper St. Clair, PA
         start_date: July 2024
-        end_date: Present
-        summary: Developed and currently maintain a local restaurant’s website, overseeing design, implementation, and upkeep to enhance business visibility and customer access.
+        end_date: Oct 2026
+        summary: Designed and developed a responsive website using HTML and CSS, with a user-friendly interface aligned with the restaurant’s brand.
 
       - company: Duquesne University
         position: Computer Science Tutor
@@ -57,8 +55,8 @@ cv:
         position: Vice President, Computer Science Club
         location: Pittsburgh, PA
         start_date: Jan 2025
-        end_date: Present
-        summary: Co-founded and serve as Vice President of the Computer Science Club at Duquesne University, shaping organizational strategy, event planning, and member engagement activities.
+        end_date: May 2026
+        summary: Co-founded and served as Vice President of the Computer Science Club, leading organizational strategy, event planning, and member engagement. Coordinated participation in Perforated AI and SteelHacks.
 
     Projects:
       - name: Sudoku Solver
