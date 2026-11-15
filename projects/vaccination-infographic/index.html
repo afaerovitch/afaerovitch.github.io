@@ -21,6 +21,8 @@
   h1 { max-width: 15ch; margin: .3em 0 .24em; font-size: clamp(2.55rem, 7.5vw, 5.4rem);
     line-height: .98; letter-spacing: -.042em; }
   .deck { max-width: 59ch; line-height: 1.6; color: #f1f3de; }
+  .sdg-label { margin: 0 0 .8rem; color: #f3cd87; font-size: .88rem;
+    font-weight: 750; letter-spacing: .04em; }
   main { padding-block: clamp(32px, 5vw, 62px); }
   section + section { margin-top: clamp(36px, 6vw, 68px); }
   h2 { font-size: clamp(1.8rem, 4.6vw, 3.1rem); line-height: 1.08; letter-spacing: -.025em; }
@@ -37,21 +39,52 @@
   .rose { --fill: #f4e0d8; --edge: #e2c1b4; }
   .stat { font-family: Baskerville, "Times New Roman", serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.35rem);
     line-height: 1; letter-spacing: -.045em; font-variant-numeric: lining-nums; }
-  .stat .stat-label { font-size: .47em; letter-spacing: 0; }
-  .bubble p:last-child { max-width: 34ch; line-height: 1.42; }
-  .map-card { margin-top: 22px; background: #eaf3f5; border: 1px solid var(--rule);
+  .bar-accessible { position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap; }
+  .bubble p { max-width: 34ch; line-height: 1.42; }
+  .bubble .stat { line-height: 1; }
+  .coverage-bars { width: min(100%, 300px); display: grid; gap: .55rem; text-align: left; }
+  .bar-label { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; }
+  .bar-track { display: block; height: .48rem; margin-top: .25rem; border-radius: 999px;
+    background: #174a3d24; overflow: hidden; }
+  .bar-fill { display: block; width: var(--coverage); height: 100%; border-radius: inherit;
+    background: var(--forest); }
+  .fact-note { color: var(--muted); font-size: .86rem; }
+  .odds-bars { gap: 0; }
+  .odds-bars .bar-track { position: relative; height: .75rem;
+    --reference-share: calc(100% / 4.2); --odds-red: #c48372;
+    background: linear-gradient(to right, var(--odds-red) var(--reference-share),
+      #174a3d24 var(--reference-share)); }
+  .odds-bars .nearer-fill { position: absolute; inset: 0 0 0 auto;
+    width: calc(100% - var(--reference-share)); border-radius: 0;
+    background: #245b50; transform-origin: left center; }
+  .odds-bars .nearer-label { text-align: right; }
+  .medical-icon { width: 3rem; height: 3rem; margin-block: .35rem; color: #922e22; }
+  .map-card { background: #eaf3f5; border: 1px solid var(--rule);
     border-radius: 20px; overflow: hidden; }
   #coverage-map { display: block; width: 100%; height: 720px; border: 0;
     background: inherit; border-radius: inherit; }
   .response { grid-template-columns: minmax(0, 1fr); max-width: 710px; margin-inline: auto; }
-  .response-section .goal { text-align: center; }
   .response .bubble p:last-child { max-width: 50ch; }
-  .goal { margin-top: 26px; padding: 17px 20px; border-left: 4px solid #b87925;
-    background: #f1ead7; line-height: 1.55; }
+  .strategies { list-style: none; padding: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .strategies .bubble { min-height: 170px; padding: 26px clamp(16px, 2.8vw, 36px);
+    border-radius: clamp(34px, 6vw, 76px); }
+  .strategy-icon { width: 3.5rem; height: 3.5rem; color: var(--forest); fill: none;
+    stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; }
+  .takeaway { margin-top: clamp(26px, 4vw, 42px); padding: clamp(32px, 6vw, 64px) clamp(20px, 5vw, 50px);
+    text-align: center;
+    background: var(--forest); color: #fff9e9; border-radius: 8px; }
+  .takeaway strong { display: block; max-width: 32ch; margin-inline: auto;
+    font-family: "DM Serif Display", Georgia, serif; font-weight: 400;
+    font-size: clamp(1.5rem, 3.4vw, 2.5rem); line-height: 1.2; }
+  .takeaway a { display: inline-block; margin-top: 1rem; font-weight: 700; }
   footer { padding: 24px 0 44px; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
   details summary { cursor: pointer; font-weight: 700; }
   footer li { margin-top: .55rem; line-height: 1.4; }
-  @media (max-width: 610px) { .facts { grid-template-columns: 1fr; } .bubble { min-height: 0; } }
+  @media (max-width: 610px) {
+    .facts, .strategies { grid-template-columns: 1fr; }
+    .bubble { min-height: 0; }
+  }
   @media (prefers-reduced-motion: reduce) { .bubble { transform: none; transition: none; } }
   @media print { .bubble { transform: none; box-shadow: none; } .fact-slot, .map-card { break-inside: avoid; } }
 </style>
@@ -61,26 +94,26 @@
   <div class="wrap">
     <p class="eyebrow">Global Disparities in Vaccination Access</p>
     <h1>The Childhood Vaccination Gap in Central Africa</h1>
-    <p class="deck">DTP3 tracks how many infants receive three doses of a vaccine that protects against diphtheria, tetanus and whooping cough.</p>
+    <p class="sdg-label">SDG 3.b · Access to Affordable Essential Vaccines</p>
+    <p class="deck">DTP3, one measure under SDG indicator 3.b.1, tracks how many infants receive three doses of a vaccine that protects against diphtheria, tetanus and whooping cough.</p>
   </div>
 </header>
 <main class="wrap">
-  <section aria-labelledby="map-title">
-    <h2 id="map-title">Explore the Global Vaccination Map</h2>
+  <section aria-label="Global vaccination map">
     <div class="map-card">
       <iframe id="coverage-map" title="Interactive world map of DTP3 vaccination coverage" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;title&gt;Global Childhood Vaccination Coverage&lt;/title&gt;
+&lt;title&gt;Explore Global Childhood Vaccination Coverage Across the Years (DTP3)&lt;/title&gt;
 &lt;style&gt;
   :root { font-family: &quot;Source Sans 3&quot;, system-ui, sans-serif; color: #142b32; background: #f4f7f6; }
   * { box-sizing: border-box; }
   main { max-width: 1200px; margin: auto; padding: clamp(16px, 4vw, 44px); }
   h1 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.08; margin: 0 0 .5rem; }
   p { margin: .5rem 0; }
-  .intro, footer { color: #3f565d; }
+  footer { color: #3f565d; }
   section, dialog { background: white; border: 1px solid #d8e3e0; border-radius: 16px; }
   section { margin-top: 1.4rem; overflow: hidden; }
   .controls { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding: 1.2rem; align-items: end; }
@@ -138,8 +171,7 @@
 &lt;body&gt;
 &lt;main&gt;
   &lt;header&gt;
-    &lt;h1&gt;Global Childhood Vaccination Coverage&lt;/h1&gt;
-    &lt;p class=&quot;intro&quot;&gt;Explore the share of infants who received three doses of the diphtheria, tetanus and pertussis vaccine (DTP3).&lt;/p&gt;
+    &lt;h1&gt;Explore Global Childhood Vaccination Coverage Across the Years (DTP3)&lt;/h1&gt;
       &lt;p class=&quot;map-instructions&quot;&gt;&lt;strong&gt;Move the year slider&lt;/strong&gt; to see DTP3 coverage in different years. &lt;strong&gt;Click or tap a country&lt;/strong&gt; to open a chart of its vaccination coverage over time.&lt;/p&gt;
   &lt;/header&gt;
   &lt;section aria-label=&quot;DTP3 world map&quot;&gt;
@@ -285,44 +317,95 @@ drawMap();
     <h2 id="gap-title">Where Coverage Differs</h2>
     <div class="facts">
       <div class="fact-slot"><article class="bubble mint" aria-label="Regional vaccination coverage">
-        <p class="eyebrow">Central Africa and the World</p>
-        <p class="stat">70% <span class="stat-label">vs.</span> 85%</p>
-        <p>Estimated DTP3 coverage in Central Africa and worldwide, respectively, in 2025.</p>
+        <p class="eyebrow">Estimated DTP3 Coverage</p>
+        <div class="coverage-bars" id="regional-coverage">
+          <div data-coverage="70">
+            <div class="bar-label"><span>Central Africa</span><strong class="stat"><span class="bar-number" aria-hidden="true">70%</span><span class="bar-accessible">70%</span></strong></div>
+            <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--coverage: 70%"></span></span>
+          </div>
+          <div data-coverage="85">
+            <div class="bar-label"><span>Worldwide</span><strong class="stat"><span class="bar-number" aria-hidden="true">85%</span><span class="bar-accessible">85%</span></strong></div>
+            <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--coverage: 85%"></span></span>
+          </div>
+        </div>
+        <p class="fact-note">2025</p>
       </article></div>
-      <div class="fact-slot"><article class="bubble gold" aria-label="Variation within Central Africa">
-        <p class="eyebrow">Within Central Africa</p>
-        <p class="stat">46% <span class="stat-label">to</span> 89%</p>
-        <p>Estimated DTP3 coverage ranged from 46% in the Central African Republic to 89% in Burundi in 2025.</p>
+      <div class="fact-slot"><article class="bubble gold" aria-label="Lowest estimated coverage in Central Africa">
+        <p class="eyebrow">Lowest Coverage in Central Africa</p>
+        <p class="stat">46%</p>
+        <p>Central African Republic</p>
+        <p class="fact-note">2025</p>
       </article></div>
     </div>
   </section>
 
   <section aria-labelledby="barriers-title">
-    <h2 id="barriers-title">What Can Interrupt Vaccination?</h2>
+    <h2 id="barriers-title">When Vaccination Is Hard to Reach</h2>
     <div class="facts">
       <div class="fact-slot"><article class="bubble gold" aria-label="Distance to vaccination sites in Cameroon">
-        <p class="eyebrow">Distance · Nkambe, Cameroon</p>
-        <p class="stat">3.2 <span class="stat-label">times the odds</span></p>
-        <p>In a 2020 study of 385 children, those living less than 5 km from a vaccination site had 3.2 times the adjusted odds of completing vaccination compared with those living farther away.</p>
+        <p class="eyebrow">Travel Distance</p>
+        <div class="coverage-bars odds-bars" id="distance-odds">
+          <div class="bar-label">
+            <span>&gt;5 km</span>
+            <span class="nearer-label">&lt;5 km · <strong>3.2x</strong></span>
+          </div>
+          <span class="bar-track" aria-hidden="true"><span class="bar-fill nearer-fill"></span></span>
+        </div>
+        <p>Adjusted odds of completing vaccination by distance to clinic</p>
+        <p class="fact-note">Nkambe, Cameroon · 2020</p>
       </article></div>
       <div class="fact-slot"><article class="bubble rose" aria-label="Conflict-related disruptions in the Democratic Republic of the Congo">
-        <p class="eyebrow">Conflict · DR Congo</p>
+        <p class="eyebrow">Conflict</p>
         <p class="stat">60%</p>
-        <p>In 2024, an estimated 60% of health facilities in conflict-affected areas were partly or fully out of operation. UNICEF reported disruptions to routine vaccination.</p>
+        <!-- Original medical facility icon. Free to use, modify, and redistribute. -->
+        <svg class="medical-icon" viewBox="0 0 48 48" aria-hidden="true" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 42h38M8 42V24l8-6m16 0 8 6v18"/>
+          <path d="M16 42V9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v33M21 42V31h6v11M18.5 17h11M24 11.5v11"/>
+        </svg>
+        <p>Health facilities partly or fully out of operation in conflict-affected areas</p>
+        <p class="fact-note">DR Congo · 2024</p>
       </article></div>
     </div>
   </section>
 
   <section class="response-section" aria-labelledby="response-title">
-    <h2 id="response-title">Reaching Children Who Missed Out</h2>
+    <h2 id="response-title">Catch-Up Programs Help Unvaccinated Children</h2>
     <div class="facts response">
       <div class="fact-slot"><article class="bubble mint" aria-label="UNICEF-supported vaccination in the Democratic Republic of the Congo">
-        <p class="eyebrow">Catch-Up Vaccination · DR Congo</p>
-        <p class="stat">123,747</p>
-        <p>Children classified as zero-dose received vaccinations through UNICEF-supported work in four provinces in 2025.</p>
+        <p class="eyebrow">Catch-Up Vaccination</p>
+        <p class="stat"><span id="catch-up-count" aria-hidden="true">123,747</span><span class="bar-accessible">123,747</span></p>
+        <p>Zero-dose children vaccinated in four DR Congo provinces · 2025</p>
       </article></div>
     </div>
-    <p class="goal"><strong>SDG 3.b</strong> calls for access to affordable essential vaccines. DTP3 is one measure used to track progress under indicator 3.b.1. <strong>Immunization Agenda 2030</strong> sets a global DTP3 coverage target of <strong>90%</strong>.</p>
+  </section>
+
+  <section aria-labelledby="strategies-title">
+    <h2 id="strategies-title">How Health Programs Improve Access</h2>
+    <ul class="facts strategies" role="list">
+      <li class="fact-slot"><div class="bubble mint">
+        <svg class="strategy-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m2.5 11 9.5-8 9.5 8M5 9v11h14V9M10 20v-6h4v6"/>
+        </svg>
+        <p><strong>Vaccinate Closer to Home</strong></p>
+      </div></li>
+      <li class="fact-slot"><div class="bubble gold">
+        <svg class="strategy-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3.5 2"/>
+        </svg>
+        <p><strong>Offer Evening and Weekend Sessions</strong></p>
+      </div></li>
+      <li class="fact-slot"><div class="bubble rose">
+        <svg class="strategy-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 16V6h12v10H8m7 0V9h4l3 4v3h-2m-4 0h-3M3 16h1"/>
+          <circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/>
+        </svg>
+        <p><strong>Improve Vaccine Storage and Delivery</strong></p>
+      </div></li>
+    </ul>
+    <p class="takeaway"><strong>Support local outreach, flexible clinic hours, and reliable vaccine delivery.</strong>
+      <a href="https://www.gavi.org/vaccineswork/drc-local-solutions-bring-vaccines-families">See how clinics in DR Congo put these ideas into practice</a></p>
   </section>
 
 </main>
@@ -332,14 +415,142 @@ drawMap();
     <ul>
       <li><a href="https://data.unicef.org/resources/dataset/immunization/">WHO–UNICEF immunization estimates, 2025 revision</a>. Central Africa refers to the African Union grouping. The global estimate includes Central Africa.</li>
       <li><a href="https://cdn.who.int/media/docs/default-source/immunization/immunization-coverage/wuenic_notes.pdf">WHO–UNICEF country notes</a>. The Central African Republic estimate uses changes in reported doses while final survey results were pending.</li>
-      <li><a href="https://link.springer.com/article/10.1186/s12982-026-02580-z">Nkambe health district study</a>. The distance finding is a local association.</li>
-      <li><a href="https://www.unicef.org/media/170891/file/Democratic-Republic-of-the-Congo-Humanitarian-Situation-Report-No.2%2C-31-December-2024.pdf">UNICEF DR Congo humanitarian report, 2024</a>.</li>
+      <li><a href="https://link.springer.com/article/10.1186/s12982-026-02580-z">Nkambe health district study</a>. The distance chart compares adjusted odds of completing vaccination in a local study of 385 children.</li>
+      <li><a href="https://www.unicef.org/media/170891/file/Democratic-Republic-of-the-Congo-Humanitarian-Situation-Report-No.2%2C-31-December-2024.pdf">UNICEF DR Congo humanitarian report, 2024</a>. The 60% estimate applies to facilities in conflict-affected areas, where the report also documents disruptions to routine vaccination.</li>
       <li><a href="https://www.unicef.org/drcongo/en/media/14836/file/DRC-EndYearResults-2025.pdf">UNICEF DR Congo programme results, 2025</a>.</li>
+      <li><a href="https://www.gavi.org/vaccineswork/drc-local-solutions-bring-vaccines-families">Gavi’s account of local vaccination strategies in DR Congo</a>. These examples are reported separately from the UNICEF programme total.</li>
       <li><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf">UN indicator 3.b.1 metadata</a> and <a href="https://data.unicef.org/topic/child-health/immunization/">UNICEF immunization statistics and the 2030 benchmark</a>.</li>
     </ul>
   </details>
 </footer>
 <script>
+  const regionalCoverage = document.getElementById("regional-coverage");
+  const distanceOdds = document.getElementById("distance-odds");
+  const catchUpCount = document.getElementById("catch-up-count");
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const bars = [...regionalCoverage.querySelectorAll("[data-coverage]")].map(row => ({
+      target: Number(row.dataset.coverage),
+      fill: row.querySelector(".bar-fill"),
+      number: row.querySelector(".bar-number")
+    }));
+    const nearerFill = distanceOdds.querySelector(".nearer-fill");
+    const catchUpTotal = Number(catchUpCount.textContent.replaceAll(",", ""));
+    const countFormat = new Intl.NumberFormat("en-US");
+    let stopCoverage;
+    let stopCatchUp;
+    let distanceAnimation;
+    const charts = [
+      {chart: regionalCoverage, play: animateCoverage, reset: resetCoverage},
+      {chart: distanceOdds, play: animateDistance, reset: resetDistance},
+      {chart: catchUpCount, play: animateCatchUp, reset: resetCatchUp}
+    ];
+    for (const state of charts) {
+      state.bubble = state.chart.closest(".fact-slot");
+      state.played = false;
+      state.reset();
+    }
+    let viewportFrame;
+    function checkCharts() {
+      viewportFrame = undefined;
+      const viewportHeight = window.innerHeight;
+      const triggerLine = viewportHeight * 2 / 3;
+      for (const state of charts) {
+        if (state.played) {
+          if (state.bubble.getBoundingClientRect().top >= viewportHeight) {
+            state.reset();
+            state.played = false;
+          }
+        } else {
+          const {top, bottom} = state.chart.getBoundingClientRect();
+          if (top < triggerLine && bottom > 0) {
+            state.played = true;
+            state.play();
+          }
+        }
+      }
+    }
+    function queueChartCheck() {
+      if (viewportFrame === undefined) viewportFrame = requestAnimationFrame(checkCharts);
+    }
+    function resetCoverage() {
+      stopCoverage?.();
+      stopCoverage = undefined;
+      for (const {fill, number} of bars) {
+        fill.style.width = "0%";
+        number.textContent = "0%";
+      }
+    }
+    function resetDistance() {
+      distanceAnimation?.cancel();
+      distanceAnimation = undefined;
+      nearerFill.style.transform = "scaleX(0)";
+    }
+    function animateProgress(update, ease = progress => 1 - (1 - progress) ** 3, duration = 950) {
+      const start = performance.now();
+      let animationFrame;
+      function step(now) {
+        const progress = Math.min(1, Math.max(0, (now - start) / duration));
+        update(ease(progress));
+        animationFrame = progress < 1 ? requestAnimationFrame(step) : undefined;
+      }
+      step(start);
+      return () => {
+        if (animationFrame !== undefined) cancelAnimationFrame(animationFrame);
+      };
+    }
+    function animateCoverage() {
+      stopCoverage = animateProgress(eased => {
+        for (const {target, fill, number} of bars) {
+          fill.style.width = target * eased + "%";
+          number.textContent = Math.round(target * eased) + "%";
+        }
+      });
+    }
+    function resetCatchUp() {
+      stopCatchUp?.();
+      stopCatchUp = undefined;
+      catchUpCount.textContent = "0";
+    }
+    function animateCatchUp() {
+      const opening = 2000;
+      const climb = 1500;
+      const finish = 1000;
+      const duration = opening + climb + finish;
+      const openingCount = 50;
+      const finishCount = 19;
+      stopCatchUp = animateProgress(progress => {
+        const elapsed = progress * duration;
+        let count;
+        if (elapsed < opening) {
+          count = openingCount * elapsed / opening;
+        } else if (elapsed < opening + climb) {
+          const t = (elapsed - opening) / climb;
+          const eased = t ** 3 * (10 - 15 * t + 6 * t ** 2);
+          count = openingCount + (catchUpTotal - openingCount - finishCount) * eased;
+        } else {
+          const t = (elapsed - opening - climb) / finish;
+          count = catchUpTotal - finishCount + finishCount * t;
+        }
+        catchUpCount.textContent = countFormat.format(Math.floor(count));
+      }, progress => progress, duration);
+    }
+    function animateDistance() {
+      nearerFill.style.transform = "";
+      distanceAnimation = nearerFill.animate?.(
+        [
+          {transform: "scaleX(0)", backgroundColor: "var(--odds-red)"},
+          {transform: "scaleX(0.55)", backgroundColor: "#d9b34c", offset: 0.55},
+          {transform: "scaleX(1)", backgroundColor: "#245b50"}
+        ],
+        {duration: 950, easing: "ease-out"}
+      );
+    }
+    window.addEventListener("scroll", queueChartCheck, {passive: true});
+    window.addEventListener("resize", queueChartCheck);
+    window.addEventListener("load", queueChartCheck, {once: true});
+    queueChartCheck();
+  }
+
   const mapFrame = document.getElementById("coverage-map");
   let mapObserver;
   function fitMap() {
