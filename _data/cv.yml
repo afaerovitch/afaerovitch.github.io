@@ -1,14 +1,8 @@
 cv:
   name: Arthem Faerovitch
-  label: Customer Support Representative & Deployment Manager
+  label: Deployment Manager, Customer Support Representative
   email: arthem@faerovitcha.dev
   location: Pittsburgh, PA
-  image: ""
-  summary: >
-    Computer Science senior at Duquesne University graduating in December 2026, with hands-on experience in software engineering and machine learning.
-    Combining strong statistical reasoning with practical development skills, demonstrated by co-building DuqSchut, a community tutor scheduling service.
-    Eager to leverage problem-solving abilities and a passion for data-driven applications in a full-time Software Engineer role.
-
   social_networks:
     - network: GitHub
       username: afaerovitch
@@ -22,120 +16,78 @@ cv:
         url: https://duq.edu/
         area: Computer Science, Minor in Mathematics
         studyType: B.S.
-        start_date: 2023
-        end_date: 2026
-        score: "3.6"
+        start_date: Aug 2023
+        end_date: Dec 2026
         highlights:
-          - "GPA: 3.6; Dean’s List"
+          - "GPA: 3.6"
+          - "Relevant Courses: Artificial Intelligence, Machine Learning, Reinforcement Learning, Web-Based Systems, Numerical Analysis, Software Engineering, Linear Algebra"
+          - "Honors: Dean’s List (Fall 2023, Spring 2024, Fall 2025, Spring 2026)"
 
     Experience:
-      - company: Maven Machines
-        position: Customer Support Representative, Deployment Manager (additional assignment, started Oct 2026)
+      - company: Maven Machines | Transportation and logistics software
+        position: Deployment Manager
         location: Pittsburgh, PA
-        start_date: Sep 2026
+        start_date: Oct 2026
         end_date: Present
-        summary: Provide technical support and coordinate a client software rollout, investigating issues, testing solutions, and collaborating with clients and engineers to improve the product experience.
+        highlights:
+          - Identified client workflow challenges and coordinated software improvements based on operational priorities.
+          - Proposed route-stage filters and partnered with a Solution Manager to deliver them in one week, cutting reported search time.
+          - Approved releases for an operation with 30–45 routes daily; tested edge cases and coordinated staging tests and production pilots.
+
+      - company: Maven Machines | Transportation and logistics software
+        position: Customer Support Representative
+        location: Pittsburgh, PA
+        start_date: Sept 2026
+        end_date: Present
+        highlights:
+          - Developed a Node.js RPC script that corrected an estimated 1,000+ production records; operations reused it across customer terminals.
+          - Investigated 20–40 support tickets weekly, tracing data and integration issues through logs and source code to identify root causes and affected services.
+          - Used SQL and RPC to investigate and correct production data; tested scripts in staging and sought peer review for higher-risk changes.
+          - Triaged bugs for engineering with reproduction steps, logs, root-cause findings, and proposed fixes.
 
       - company: Owl's Nest Restaurant
         position: Website Development and Maintenance
         location: Upper St. Clair, PA
         start_date: July 2024
         end_date: Oct 2026
-        summary: Designed and developed a responsive website using HTML and CSS, with a user-friendly interface aligned with the restaurant’s brand.
+        highlights:
+          - Developed a responsive, brand-aligned website using HTML and CSS.
 
       - company: Duquesne University
         position: Computer Science Tutor
         location: Pittsburgh, PA
-        start_date: Sep 2025
+        start_date: Sept 2025
         end_date: May 2026
-        summary: Supported Duquesne University computer science students through one-on-one and small-group tutoring in programming, debugging, and core CS concepts, helping reinforce problem-solving skills and build confidence with coursework.
+        highlights:
+          - Tutored peers in computer science through hands-on problem-solving and code review.
 
     Leadership Experience:
       - organization: Duquesne University
-        position: Vice President, Computer Science Club
+        position: Computer Science Club
         location: Pittsburgh, PA
         start_date: Jan 2025
         end_date: May 2026
-        summary: Co-founded and served as Vice President of the Computer Science Club, leading organizational strategy, event planning, and member engagement. Coordinated participation in Perforated AI and SteelHacks.
+        highlights:
+          - Co-founded the club as Vice President; helped grow membership from 15 to about 30 through faculty outreach and meetings.
+          - Organized club teams for SteelHacks and Perforated AI.
 
     Projects:
-      - name: Sudoku Solver
-        summary: >
-          Engineered a modular Java-based CSP solver utilizing AC-3 inference and advanced search heuristics (MRV, LCV) to solve complex Sudoku variants;
-          built an automated JUnit pipeline to benchmark algorithmic efficiency and ensure code robustness.
+      - name: Pokemon Card Classifier | Machine Learning Course (Duquesne)
+        summary: "Apr 2025 – May 2025"
         highlights:
-          - Artificial Intelligence & Algorithm Design
-          - Performance Engineering & Benchmarking
-          - Test-Driven Development
-        start_date: 2026-04-01
-        end_date: 2026-05-01
+          - Built a YOLOv8 and Python pipeline to classify Pokémon cards in eBay images; scraped, labeled, and prepared training data.
 
-      - name: Pokemon Card Classifier
-        summary: >
-          Engineered a computer vision pipeline using YOLOv8 and Python to classify Pokemon card images, achieving high-accuracy inference on eBay listing images.
-          Designed and implemented a web scraping pipeline to collect, preprocess, and label a custom training dataset for scalable data acquisition and improved model generalization.
+      - name: DuqSchut Tutor Scheduling | Software Engineering Course (Duquesne)
+        summary: "Feb 2025 – May 2025"
         highlights:
-          - Computer Vision and Object Detection
-          - Data Collection and Preprocessing
-          - Model Training and Evaluation
-        end_date: 2025-05-01
-
-      - name: DuqSchut Tutor Scheduling
-        summary: >
-          Collaborated in a 25-member Agile development team to build a full-stack tutor scheduling platform using .NET, Blazor, and Azure, delivering scalable CRUD functionality across front-end and back-end systems.
-          Developed and maintained features using C#, Razor/HTML, and MVC architecture, applying SOLID design principles to ensure modularity, maintainability, and clean code practices.
-        highlights:
-          - Full-Stack Development
-          - Agile Team Collaboration
-          - MVC Architecture and SOLID Design
-        end_date: 2025-05-01
+          - Built a tutor scheduling platform on a 25-member Agile team using C#, .NET, Blazor, and Azure, with MVC, SOLID, and Git.
 
     Skills:
-      - name: Programming Languages
-        keywords:
-          - Java
-          - C#
-          - Python
-          - C
-          - C++
-          - JavaScript
-          - TypeScript
-
+      - name: Languages
+        keywords: [Java, C#, Python, C, C++, JavaScript, TypeScript, SQL, Russian (Fluent)]
       - name: Tools
-        keywords:
-          - .NET
-          - Blazor
-          - PyTorch
-          - Keras
-          - Node.js
-          - Azure
-          - Git
-          - Linux
-
+        keywords: [Node.js, RPC, AMQP, Jira, .NET, Blazor, PyTorch, Keras, Azure, Git, Linux]
       - name: Software Engineering
-        keywords:
-          - Agile
-          - Scrum
-          - MVC Architecture
-          - SOLID Principles
-          - CRUD Development
-          - Design Patterns
-
+        keywords: [Agile, Scrum, MVC Architecture, SOLID Principles, CRUD Development, Design Patterns]
       - name: Machine Learning
-        keywords:
-          - Object Detection
-          - Classification
-          - Data Processing
-          - Model Training & Evaluation
-
-    Languages:
-      - name: English
-        summary: "Native speaker"
-
-      - name: Russian
-        summary: "Fluent"
-
-    # References:
-      # - name: Professor John Doe
-        # icon: fa-solid fa-laptop
-        # reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        keywords: [Object detection, Classification, Data processing, Model training & evaluation]
