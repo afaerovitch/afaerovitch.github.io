@@ -77,11 +77,11 @@ cv:
           - Built a tutor scheduling platform on a 25-member Agile team using C#, .NET, Blazor, and Azure, with MVC, SOLID, and Git.
 
     Skills:
-      - name: Languages
-        keywords: [Java, C#, Python, C, C++, JavaScript, TypeScript, SQL, Russian (Fluent)]
-      - name: Tools
-        keywords: [Node.js, RPC, AMQP, Jira, .NET, Blazor, PyTorch, Keras, Azure, Git, Linux]
-      - name: Software Engineering
-        keywords: [Agile, Scrum, MVC Architecture, SOLID Principles, CRUD Development, Design Patterns]
-      - name: Machine Learning
-        keywords: [Object detection, Classification, Data processing, Model training & evaluation]
+      - label: Languages
+        details: Java, C#, Python, C, C++, JavaScript, TypeScript, SQL, Russian (Fluent)
+      - label: Tools
+        details: Node.js, RPC, AMQP, Jira, .NET, Blazor, PyTorch, Keras, Azure, Git, Linux
+      - label: Software Engineering
+        details: Agile, Scrum, MVC Architecture, SOLID Principles, CRUD Development, Design Patterns
+      - label: Machine Learning
+        details: Object detection, Classification, Data processing, Model training & evaluation
