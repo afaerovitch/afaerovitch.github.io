@@ -1,6 +1,6 @@
 cv:
   name: Arthem Faerovitch
-  label: Deployment Manager, Customer Support Representative
+  headline: Deployment Manager, Customer Support Representative
   email: arthem@faerovitcha.dev
   location: Pittsburgh, PA
   social_networks:
@@ -16,8 +16,7 @@ cv:
         url: https://duq.edu/
         area: Computer Science, Minor in Mathematics
         studyType: B.S.
-        start_date: Aug 2023
-        end_date: Dec 2026
+        date: Aug 2023 - Dec 2026
         highlights:
           - "GPA: 3.6"
           - "Relevant Courses: Artificial Intelligence, Machine Learning, Reinforcement Learning, Web-Based Systems, Numerical Analysis, Software Engineering, Linear Algebra"
@@ -27,8 +26,7 @@ cv:
       - company: Maven Machines | Transportation and logistics software
         position: Deployment Manager
         location: Pittsburgh, PA
-        start_date: Oct 2026
-        end_date: Present
+        date: Oct 2026 - Present
         highlights:
           - Identified client workflow challenges and coordinated software improvements based on operational priorities.
           - Proposed route-stage filters and partnered with a Solution Manager to deliver them in one week, cutting reported search time.
@@ -37,8 +35,7 @@ cv:
       - company: Maven Machines | Transportation and logistics software
         position: Customer Support Representative
         location: Pittsburgh, PA
-        start_date: Sept 2026
-        end_date: Present
+        date: Sept 2026 - Present
         highlights:
           - Developed a Node.js RPC script that corrected an estimated 1,000+ production records; operations reused it across customer terminals.
           - Investigated 20–40 support tickets weekly, tracing data and integration issues through logs and source code to identify root causes and affected services.
@@ -48,25 +45,22 @@ cv:
       - company: Owl's Nest Restaurant
         position: Website Development and Maintenance
         location: Upper St. Clair, PA
-        start_date: July 2024
-        end_date: Oct 2026
+        date: July 2024 - Oct 2026
         highlights:
           - Developed a responsive, brand-aligned website using HTML and CSS.
 
       - company: Duquesne University
         position: Computer Science Tutor
         location: Pittsburgh, PA
-        start_date: Sept 2025
-        end_date: May 2026
+        date: Sept 2025 - May 2026
         highlights:
           - Tutored peers in computer science through hands-on problem-solving and code review.
 
     Leadership Experience:
-      - organization: Duquesne University
+      - company: Duquesne University
         position: Computer Science Club
         location: Pittsburgh, PA
-        start_date: Jan 2025
-        end_date: May 2026
+        date: Jan 2025 - May 2026
         highlights:
           - Co-founded the club as Vice President; helped grow membership from 15 to about 30 through faculty outreach and meetings.
           - Organized club teams for SteelHacks and Perforated AI.
